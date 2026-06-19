@@ -23,12 +23,7 @@ jobs:
       uses: android-actions/setup-android@v3
 
     - name: Install Gradle
-      run: |
-        sudo apt-get update
-        sudo apt-get install gradle -y
-
-    - name: Clean
-      run: gradle clean
+      run: sudo apt-get install gradle -y
 
     - name: Build APK
       run: gradle assembleDebug
